@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   react-app:
-    container_name: dev-vuejs-container
-    image: dev-vuejs
+    container_name: prod-vuejs-container
+    image: production-vuejs
     build: 
       context: .
       dockerfile: Dockerfile
-      target: dev-stage
+      target: production-stage
     volumes:
       - ./node_modules:/node_modules/
     ports:
-      - 8080:8080
+      - 8080:80
